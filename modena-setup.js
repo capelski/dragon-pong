@@ -1,14 +1,7 @@
-const { express } = require('modena');
-var router = express.Router();
-var path = require('path');
+const { configureEndpoints } = require('modena');
 var matchesController = require('./controllers/matches-controller');
 
-const configureRouter = (middleware) => {
-	router.get('/', function (req, res, next) {
-	  res.render('index');
-	});
-	router.get('/matches', matchesController.getAll);
-	return router;
-}
-
-module.exports = { configureRouter };
+module.exports = configureEndpoints(router => {
+	router.get('/', (req, res, next) => res.render('index'));
+    router.get('/matches', matchesController.getAll);
+});
