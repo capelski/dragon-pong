@@ -3,10 +3,10 @@ var app = angular.module('DragonPong', ['ngRoute']);
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/', {
-        templateUrl : '/dragon-pong/templates/ranking.html'
+        templateUrl : '/templates/ranking.html?$modena=dragon-pong'
     })
     .when('/player-details/:playerName?', {
-        templateUrl : '/dragon-pong/templates/player-details.html',
+        templateUrl : '/templates/player-details.html?$modena=dragon-pong',
         controller: 'PlayerCtrl'
     })
     .otherwise({

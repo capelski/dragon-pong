@@ -254,7 +254,7 @@ app.controller('MainCtrl', function($scope, $http, Matches, Ranking) {
     angular.element('body').ready(function() {        
         $http({
             method: 'GET',
-            url: '/dragon-pong/matches'
+            url: '/matches?$modena=dragon-pong'
         }).then(function(response) {
             $scope.players = response.data.players;
             $scope.players.sort(function(a, b) {
