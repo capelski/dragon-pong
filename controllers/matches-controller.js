@@ -1,14 +1,7 @@
 var matchesData = require('./matches.json');
 
-function MatchesController() {
+const getAll = (req, res, next) => res.json(matchesData);
 
-	function getAll(req, res, next) {
-        return res.json(matchesData);
-	}
-
-	return {
-		getAll
-	};
-}
-
-module.exports = MatchesController();
+module.exports = {
+    getAll
+};
