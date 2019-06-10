@@ -9,6 +9,6 @@ module.exports = () => {
 		'/dragon-pong',
 		(req, res, next) => res.sendFile(join(__dirname, 'public', 'index.html'))
 	);
-    app.get('/matches', matchesController.getAll);
+    app.get('/api/matches', matchesController.getAll);
 	return app;
 };
