@@ -4,7 +4,7 @@ const { join } = require('path');
 
 module.exports = () => {
 	const app = express();
-	app.use('/dragon-pong', express.static(join(__dirname, 'public')));
+	app.use('/dragon-pong', express.static(join(__dirname, 'docs')));
     // app.get('/api/matches', matchesController.getAll);
 	return app;
 };
